@@ -1,4 +1,5 @@
 #### 1. **Import Modules and Set Up App**
+**View live**: https://car-blog-rest-api-node.onrender.com/
 ```javascript
 import express from "express";
 import bodyParser from "body-parser";
@@ -8,6 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const API_URL = "https://car-blog-rest-api.onrender.com";
 ```
+- **API Explaination**: The api is explained here: https://github.com/iamrahul-l/car-blog-REST-API
 - **express**: Framework to handle HTTP requests and routing.
 - **body-parser**: Middleware to parse request bodies, especially for form submissions.
 - **axios**: HTTP client used to send requests to the external API.
