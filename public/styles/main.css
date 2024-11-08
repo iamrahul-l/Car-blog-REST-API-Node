@@ -1,0 +1,255 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ae5706;
+  color: #fff;
+  padding: 1em;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  color: #e61111;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.slides img {
+  width: 100%;
+  height: 400px;
+  display: none;
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-overlay p {
+  font-size: 1.2em;
+}
+
+/* Blog Content */
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#newPostBtn {
+  background-color: #bd4707;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#newPostBtn:hover {
+  background-color: #a53809;
+}
+
+/* Grid layout for the posts */
+#postsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#postsList li {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+#postsList li:hover {
+  transform: translateY(-5px);
+}
+
+#postsList h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#postsList small {
+  display: block;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+#postsList p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+#postsList .edit, #postsList .delete {
+  font-size: 0.9em;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#postsList .edit {
+  background-color: #007bff;
+}
+
+#postsList .edit:hover {
+  background-color: #0056b3;
+}
+
+#postsList .delete {
+  background-color: #e74c3c;
+}
+
+#postsList .delete:hover {
+  background-color: #c0392b;
+}
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #333;
+  background-color: #f7f9fc;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+button.full-width {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #99210e;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.full-width:hover {
+  background-color: #ab2d07;
+}
+
+button.full-width:active {
+  background-color: #ca4d04;
+}
+
+button.full-width:focus {
+  outline: none;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #9a4309;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #9a4309;
+}

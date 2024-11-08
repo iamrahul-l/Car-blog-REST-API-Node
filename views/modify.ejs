@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= heading %></title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo">CarBlog</a>
+      <ul class="navbar-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="https://github.com/iamrahul-l/Car-blog-REST-API">Project Documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero">
+    <div class="slides">
+      <img src="/images/car1.jpg" alt="Car 1" class="slide active">
+      <img src="/images/car2.jpg" alt="Car 2" class="slide">
+      <img src="/images/car3.jpg" alt="Car 3" class="slide">
+    </div>
+    <div class="hero-overlay">
+      <h1>Welcome to CarBlog</h1>
+      <p>Your ultimate source for car reviews, news, and tips.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>
+      <%= heading %>
+    </h1>
+
+    <% if (locals.post) { %>
+      <form id="editForm" method="post" action="/api/posts/<%=post.id%>">
+        <input type="text" name="title" value="<%=post.title %>">
+        <textarea name="content" rows="10"><%=post.content %></textarea>
+        <input type="text" name="author" value="<%=post.author %>">
+        <button class="full-width" type="submit">
+          <%= submit %>
+        </button>
+      </form>
+      <% } else {%>
+        <form id="newPostForm" method="post" action="/api/posts">
+          <input type="text" name="title" placeholder="Title" required>
+          <textarea name="content" placeholder="Content" required rows="10"></textarea>
+          <input type="text" name="author" placeholder="Author" required>
+          <button class="full-width" type="submit">
+            <%= submit %>
+          </button>
+        </form>
+        <% } %>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 CarBlog. All rights reserved.</p>
+  
+  </footer>
+  <script src="/scripts/carousel.js"></script>
+</body>
+
+</html>
