@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT||4000;
 
 
 let posts = [
@@ -12,7 +12,7 @@ let posts = [
     content:
       "Over the years, car engines have evolved from simple mechanical structures to advanced powerhouses capable of jaw-dropping performance. This article explores the advancements in engine technology, including turbocharging, supercharging, and hybrid integration. With every new model, manufacturers push the boundaries of speed, power, and efficiency.",
     author: "Dominic Toretto",
-    date: "2023-08-01T10:00:00Z",
+    date: "2024-08-01T10:00:00Z",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ let posts = [
     content:
       "Electric cars are taking the automotive world by storm, but can they find a place in street racing? This post examines the impact of electric technology on car performance, the potential for instant torque, and whether the electric revolution could redefine speed as we know it. With major manufacturers entering the scene, the future of street racing could look very different.",
     author: "Brian O'Conner",
-    date: "2023-08-05T14:30:00Z",
+    date: "2024-08-05T14:30:00Z",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ let posts = [
     content:
       "Mastering drift is an art, and having the right car setup is crucial. In this guide, we’ll go over the best modifications to maximize drift control, from suspension upgrades to differential tuning. Learn how to transform a standard car into a drift-ready machine capable of smooth, controlled slides around tight corners.",
     author: "Letty Ortiz",
-    date: "2023-08-10T09:15:00Z",
+    date: "2024-08-10T09:15:00Z",
   },
 ];
 
