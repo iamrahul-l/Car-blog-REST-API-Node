@@ -178,20 +178,14 @@ To add a new post:
 - Fill out the form and submit.
 - The new post appears on the homepage.
 
-### Example GitHub README
-
-```markdown
 # Car Blog Express Server
 
 This Express server provides routes for creating, reading, updating, and deleting car blog posts through an external REST API.
 
 ## Installation
 
-Clone the repository:
-```bash
-git clone https://github.com/yourusername/car-blog-express.git
-cd car-blog-express
-```
+Clone the repository and then 
+
 
 Install dependencies:
 ```bash
