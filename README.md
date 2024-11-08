@@ -1,5 +1,8 @@
 #### 1. **Import Modules and Set Up App**
+**note**: Before viewing live open this url to wake up the api server https://car-blog-rest-api.onrender.com/ its should show **Cannot GET /** 
+then proceed to the car blog.
 **View live**: https://car-blog-rest-api-node.onrender.com/
+
 ```javascript
 import express from "express";
 import bodyParser from "body-parser";
